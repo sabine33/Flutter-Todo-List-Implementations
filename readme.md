@@ -6,6 +6,8 @@ Here we have different coding challenges for new developers. The challenges coul
 ## List of challenges
 
 1. CRUD Todo Application with persistent storage & state management with provider package 
+2. CRUD Todo Application with persistant storage using firebase cloud store & state management with provider 
+
 
 
 <!-- 

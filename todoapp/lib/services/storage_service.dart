@@ -3,20 +3,23 @@ import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:todoapp/models/todo.dart';
 
-import 'shared_prefs.dart';
+import 'storage_interface.dart';
 
 late SharedPreferences prefs;
 
-class StorageService {
-  Future<StorageService> initialize() async {
+class LocalStorageService implements LocalStorageServiceInterface {
+  @override
+  Future<LocalStorageService> initialize() async {
     prefs = await SharedPreferences.getInstance();
     return this;
   }
 
+  @override
   void saveTodos(List<TodoItem> tasks) {
     prefs.setString('tasks', jsonEncode(tasks));
   }
 
+  @override
   List<TodoItem> getTodos() {
     var storedData = prefs.getString('tasks');
     print(storedData);

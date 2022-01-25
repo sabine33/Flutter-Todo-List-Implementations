@@ -13,6 +13,6 @@ After completing this project you'll learn,
 - Showing popup dialog
 - Custom Type definitions
 - Passing data between widgets/classes
-- Running basic tests
 
-![Screenshot](./screenshot.png)
+![Screenshot](./screenshot.jpg)
+

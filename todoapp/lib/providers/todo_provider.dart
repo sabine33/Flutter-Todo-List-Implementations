@@ -5,10 +5,10 @@ import 'package:todoapp/models/todo.dart';
 import 'package:todoapp/services/storage_service.dart';
 
 class TodoListProvider extends ChangeNotifier {
-  late StorageService _storageService;
+  late LocalStorageService _storageService;
   late List<TodoItem> _tasks;
 
-  TodoListProvider(StorageService service) {
+  TodoListProvider(LocalStorageService service) {
     _storageService = service;
     _tasks = _storageService.getTodos();
   }

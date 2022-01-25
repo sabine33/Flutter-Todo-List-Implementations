@@ -7,7 +7,7 @@ import 'screens/homepage.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized(); // mandatory when awaiting on main
 
-  final prefs = await StorageService().initialize();
+  final prefs = await LocalStorageService().initialize();
   runApp(ChangeNotifierProvider(
       create: (BuildContext context) {
         return TodoListProvider(prefs);

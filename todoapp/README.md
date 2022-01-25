@@ -14,5 +14,11 @@ After completing this project you'll learn,
 - Custom Type definitions
 - Passing data between widgets/classes
 
+### Things that could be improved
+- Firebase integration
+- Better design
+- Code refactoring
+- More functionalities
+
 ![Screenshot](./screenshot.jpg)
 

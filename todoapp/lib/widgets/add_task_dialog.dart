@@ -28,8 +28,21 @@ class AddTaskDialog extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                Container(
+                    decoration: BoxDecoration(
+                        // color: Colors.blueAccent,
+                        //  borderRadius: BorderRadius.circular(10)
+                        ),
+                    padding: EdgeInsets.all(10),
+                    // color: Colors.blue,
+                    child: Text(
+                      "Add/Update Todo",
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    )),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: TextField(
@@ -40,6 +53,7 @@ class AddTaskDialog extends StatelessWidget {
                     maxLines: 1,
                   ),
                 ),
+                SizedBox(height: 10),
                 OutlinedButton(
                     onPressed: () {
                       if (todoItem == null) {
@@ -58,5 +72,3 @@ class AddTaskDialog extends StatelessWidget {
     );
   }
 }
-
-void onTaskUpdated(TodoItem? todoItem) {}

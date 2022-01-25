@@ -5,19 +5,19 @@ import 'package:todoapp/models/todo.dart';
 
 import 'shared_prefs.dart';
 
-const KEY = "tasks";
 late SharedPreferences prefs;
 
 class StorageService {
-  static Future initialize() async {
+  Future<StorageService> initialize() async {
     prefs = await SharedPreferences.getInstance();
+    return this;
   }
 
-  static void saveTodos(List<TodoItem> tasks) {
+  void saveTodos(List<TodoItem> tasks) {
     prefs.setString('tasks', jsonEncode(tasks));
   }
 
-  static List<TodoItem> getTodos() {
+  List<TodoItem> getTodos() {
     var storedData = prefs.getString('tasks');
     print(storedData);
     if (storedData != null) {

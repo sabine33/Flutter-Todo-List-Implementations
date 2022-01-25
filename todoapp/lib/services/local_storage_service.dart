@@ -7,7 +7,7 @@ import 'storage_interface.dart';
 
 late SharedPreferences prefs;
 
-class LocalStorageService implements LocalStorageServiceInterface {
+class LocalStorageService implements StorageServiceInterface {
   @override
   Future<LocalStorageService> initialize() async {
     prefs = await SharedPreferences.getInstance();

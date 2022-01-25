@@ -2,13 +2,13 @@ import 'dart:collection';
 import 'dart:convert';
 import 'package:flutter/widgets.dart';
 import 'package:todoapp/models/todo.dart';
-import 'package:todoapp/services/storage_service.dart';
+import 'package:todoapp/services/storage_interface.dart';
 
 class TodoListProvider extends ChangeNotifier {
-  late LocalStorageService _storageService;
+  late StorageServiceInterface _storageService;
   late List<TodoItem> _tasks;
 
-  TodoListProvider(LocalStorageService service) {
+  TodoListProvider(StorageServiceInterface service) {
     _storageService = service;
     _tasks = _storageService.getTodos();
   }

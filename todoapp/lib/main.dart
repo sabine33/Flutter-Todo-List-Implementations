@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todoapp/providers/todo_provider.dart';
-import 'package:todoapp/services/storage_service.dart';
+import 'package:todoapp/services/local_storage_service.dart';
 import 'screens/homepage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized(); // mandatory when awaiting on main
 
-  final prefs = await LocalStorageService().initialize();
+  final repository = await LocalStorageService().initialize();
   runApp(ChangeNotifierProvider(
       create: (BuildContext context) {
-        return TodoListProvider(prefs);
+        return TodoListProvider(repository);
       },
       child: const TodoApp()));
 }

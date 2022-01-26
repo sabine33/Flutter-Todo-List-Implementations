@@ -1,12 +1,15 @@
 # Flutter Coding Challenges
 
-Here we have different coding challenges for new developers. The challenges could be solved everyday.
-
+Here are the solution of different coding challenges for new developers.
 
 ## List of challenges
 
-1. CRUD Todo Application with persistent storage & state management with provider package 
-2. CRUD Todo Application with persistant storage using firebase cloud store & state management with provider 
+1. CRUD Todo Application (Shared Preferences+Provider)
+2. CRUD Todo Application (Firebase+Provider)
+3. CRUD Todo Application (Shared Preferences+Riverpod)
+4. CRUD Todo Application (Firebase+Shared Preferences+Riverpod)
+
+
 
 
 

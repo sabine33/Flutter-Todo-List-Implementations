@@ -7,11 +7,9 @@ import 'screens/homepage.dart';
 import 'services/local_storage_service.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized(); // mandatory when awaiting on main
-  // final repository = await LocalStorageService.initialize();
+  WidgetsFlutterBinding.ensureInitialized();
   final repository = await FirebaseStorageService.initialize();
   final provider = await TodoListProvider.initialize(repository);
-  // print(repository.getTodos());
   runApp(ChangeNotifierProvider(
       create: (BuildContext context) {
         return provider;
@@ -26,11 +24,11 @@ class TodoApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Challenges #2',
+      title: 'Flutter Challenges #3',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Homepage(title: 'To Do application with firebase'),
+      home: const Homepage(title: 'To Do application with riverpod'),
     );
   }
 }

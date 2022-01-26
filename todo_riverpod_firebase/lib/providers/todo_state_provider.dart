@@ -7,7 +7,7 @@ import 'package:todoapp/services/local_storage_service.dart';
 import 'package:todoapp/services/storage_interface.dart';
 
 final firebaseStorageProvider =
-    StateProvider<StorageServiceInterface>((ref) => firebaseStorageService);
+    Provider<StorageServiceInterface>((ref) => throw Error());
 
 final itemListControllerProvider =
     StateNotifierProvider<TodoListController, AsyncValue<List<TodoItem>>>(

@@ -10,8 +10,10 @@ import 'services/storage_interface.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized(); // mandatory when awaiting on main
-  await initializeFirebase();
-  runApp(const ProviderScope(child: TodoApp()));
+  final firebaseService = await initializeFirebase();
+  runApp(ProviderScope(
+      overrides: [firebaseStorageProvider.overrideWithValue(firebaseService)],
+      child: TodoApp()));
 }
 
 class TodoApp extends StatelessWidget {

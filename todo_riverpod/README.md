@@ -1,4 +1,4 @@
-# todo_riverpod
+# Flutter todo app based on riverpod
 
 Flutter Todo Application with Riverpod state management
 
